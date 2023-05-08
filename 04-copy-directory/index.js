@@ -4,8 +4,8 @@ const path = require('path');
 async function checkAndDeleteFilesCopyDir() {
   try {
     await fs.promises.rm(path.join(__dirname, 'files-copy'), { recursive: true });
-  } catch (err) {
-    console.log(err);
+  } catch  {
+    return;
   }
 }
 
